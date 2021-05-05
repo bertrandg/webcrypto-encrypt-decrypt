@@ -17,7 +17,7 @@ function encryptWithPublic() {
       (document.getElementById('cyphertext') as any).value = d.cyphertextString;
     })
     .catch(err => {
-      console.error('FAIL > ', err);
+      console.error('FAIL (Maybe data to encrypt too long!) > ', err);
     });
 }
 
@@ -35,7 +35,7 @@ function decryptWithPrivate() {
       (document.getElementById('plaintext') as any).value = d.plaintextString;
     })
     .catch(err => {
-      console.error('FAIL (Maybe data to encrypt too long!) > ', err);
+      console.error('FAIL > ', err);
     });
 }
 
